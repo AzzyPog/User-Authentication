@@ -6,15 +6,20 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon app.js",
-    "migrate": "node src/config/migrate.js"
+    "migrate": "node src/config/migrate.js",
+    "keys": "node src/config/generateRSAKeys.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
+    "crypto": "^1.0.1",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
     "nodemon": "^2.0.21",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.1",
     "sequelize": "^6.29.3",
     "sqlite3": "^5.1.6"
   }
