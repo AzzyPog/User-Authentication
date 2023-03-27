@@ -1,8 +1,20 @@
 const User = require("../models/User");
+const Auth = require("../config/auth");
+
 
 async function create (req, res) {
     try {
-        const user = await User.create(req.body);
+        const {password} = req.body;
+        const generateHashSalt = Auth.generatePassword(password);
+        const userData = {
+            firstName: req.body.firstName,
+            lastName: req.body.lastName,
+            email: req.body.email,
+            birthDate: req.body.birthDate,
+            hash: generateHashSalt.hash,
+            salt: generateHashSalt.salt
+        };
+        const user = await User.create(userData);
         if(user) return res.status(201).json({message: "Usuário foi criado", User: user});
         throw new Error();
     } catch (error) {
