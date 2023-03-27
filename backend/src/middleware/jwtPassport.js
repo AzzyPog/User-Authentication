@@ -13,17 +13,17 @@ const option = {
     algorithms: ["RS256"] 
 };
 
-async function response(payload, done) {
-    await User.findByPk(payload.sub).then((user) => {
-        if (user) {
-            return done(null, user);
-        } else {
-            return done(null, false);
-        }
-    }).catch(err => done(err, null));
-}
+
 
 module.exports = (passport) => {
-    passport.use(new JwtStrategy(option, response()));
+    passport.use(new JwtStrategy(option, async (payload, done) => {
+		await User.findByPk(payload.sub).then((user) => {
+			if (user) {
+				return done(null, user);
+			} else {
+				return done(null, false);
+			}
+		}).catch(err => done(err, null));
+	}));
 };
 

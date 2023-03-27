@@ -11,7 +11,7 @@ const path = require("path");
         },
         privateKeyEncoding:{
             type: "pkcs1",
-            format: "pe,"
+            format: "pem"
         },
     });
 

@@ -30,8 +30,8 @@ function generateJWT (user) {
 
 function decodeJWT (token) {
     const payload = token.split(".")[1];
-    const encodedPayload = Buffer.from(payload, "base64");
-    const decodedPayload = encodedPayload.toString("utf-8");
+	const encodedPayload = Buffer.from(payload, 'base64'); //token codificado
+	const decodedPayload = encodedPayload.toString('utf-8'); //descodificando o token para utf-8
 
     return JSON.parse(decodedPayload);
 };

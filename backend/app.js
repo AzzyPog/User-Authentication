@@ -7,8 +7,11 @@ const app = express();
 const port = process.env.PORT;
 const routes = require("./src/routes/routes");
 // const cors = require("cors");
-
 // app.use(cors());
+
+const passport = require("passport");
+require("../backend/src/middleware/jwtPassport")(passport);
+app.use(passport.initialize());
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
