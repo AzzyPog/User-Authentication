@@ -8,7 +8,8 @@
     "dev": "nodemon app.js",
     "migrate": "node src/config/migrate.js",
     "keys": "node src/config/generateRSAKeys.js",
-    "eslint:fix": "eslint --fix ./*.js"
+    "eslint:fix": "eslint --fix ./*.js",
+    "megadev": "npm run migrate && npm run keys && npm run dev"
   },
   "author": "",
   "license": "ISC",
