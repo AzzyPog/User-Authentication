@@ -1,55 +1,54 @@
-const Datatype = require("sequelize");
-const sequelize = require("../config/sequelize");
+const Datatype = require('sequelize')
+const sequelize = require('../config/sequelize')
 
-
-const User = sequelize.define("User", {
-    firstName: {
-        type: Datatype.STRING,
-        validate: {
-            is: {
-                args: ["^[a-z]+$", "i"],
-                msg: "Seu nome só deve conter letras."
-            }
-        },
-        allowNull: false
+const User = sequelize.define('User', {
+  firstName: {
+    type: Datatype.STRING,
+    validate: {
+      is: {
+        args: ['^[a-z]+$', 'i'],
+        msg: 'Seu nome só deve conter letras.'
+      }
     },
-    lastName: {
-        type: Datatype.STRING,
-        validate: {
-            is: {
-                args: ["^[a-z]+$", "i"],
-                msg: "Seu nome só deve conter letras."
-            }
-        },
-        allowNull: false
+    allowNull: false
+  },
+  lastName: {
+    type: Datatype.STRING,
+    validate: {
+      is: {
+        args: ['^[a-z]+$', 'i'],
+        msg: 'Seu nome só deve conter letras.'
+      }
     },
-    email: {
-        type: Datatype.STRING,
-        allowNull: false,
-        validate: {
-            isEmail: { 
-                msg: "modelo de email inválido." 
-            }
-        },
-        unique: true
+    allowNull: false
+  },
+  email: {
+    type: Datatype.STRING,
+    allowNull: false,
+    validate: {
+      isEmail: {
+        msg: 'modelo de email inválido.'
+      }
     },
-    birthDate: {
-        type: Datatype.DATEONLY,
-        allowNull: false,
-        validate: {
-            isDate: {
-                msg: "Modelo de data inválido."
-            }
-        }
-    },
-    hash: {
-        type: Datatype.TEXT,
-        allowNull: false
-    },
-    salt: {
-        type: Datatype.TEXT,
-        allowNull: false
+    unique: true
+  },
+  birthDate: {
+    type: Datatype.DATEONLY,
+    allowNull: false,
+    validate: {
+      isDate: {
+        msg: 'Modelo de data inválido.'
+      }
     }
-});
+  },
+  hash: {
+    type: Datatype.TEXT,
+    allowNull: false
+  },
+  salt: {
+    type: Datatype.TEXT,
+    allowNull: false
+  }
+})
 
-module.exports = User;
+module.exports = User

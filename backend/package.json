@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon app.js",
     "migrate": "node src/config/migrate.js",
-    "keys": "node src/config/generateRSAKeys.js"
+    "keys": "node src/config/generateRSAKeys.js",
+    "eslint:fix": "eslint --fix ./*.js"
   },
   "author": "",
   "license": "ISC",
@@ -22,5 +23,12 @@
     "passport-jwt": "^4.0.1",
     "sequelize": "^6.29.3",
     "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "eslint": "^8.37.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-promise": "^6.1.1"
   }
 }
