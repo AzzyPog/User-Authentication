@@ -71,7 +71,7 @@ http://localhost:8000
 O link abaixo levará para a documentação de como usar a **API**: 
 
 &nbsp;
-[Clique aqui para ver a documentação online!]()
+[Clique aqui para ver a documentação online!](https://documenter.getpostman.com/view/20330795/2s93RUvXaA)
 
 &nbsp;
 ## 🖊️ Licença
