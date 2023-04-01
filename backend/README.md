@@ -2,12 +2,11 @@
 <p align="center">Este é um projeto de API de autenticação de usuário.</p>
 
 <p align="center"> 
- <a href="#%EF%B8%8F-licença">Licença</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="#-tecnologias-utilizadas">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="#-dependências">Dependências</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="#-como-rodar-o-projeto">Como rodar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
  <a href="#-documentação-da-api">Documentação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
- <a href="#-como-rodar-o-projeto">Como rodar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
- <a href="#-como-foi-criado-o-banco-de-dados">Database</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
- <a href="#-dependências">Dependências</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
- <a href="#-tecnologias-utilizadas">Tecnologias</a>
+ <a href="#%EF%B8%8F-licença">Licença</a>
 </p>
 
 ---
@@ -21,7 +20,7 @@ Esse projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 - Javascript
 - Git e Github
-- sqlite3
+- Sqlite
 - Eslint
 - Postman
 
@@ -64,7 +63,7 @@ npm run megadev
 http://localhost:8000
 ```
 
-7. Para maiores dúvidas, leia a documentação da API no tópico Documentação.
+7. Para maiores informações, leia a documentação da API.
 
 
 &nbsp;
